@@ -147,6 +147,19 @@ class UserSeeder extends Seeder
             'remember_token' => Str::random(10),     
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
             'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
+        ],[ // Mahasiswa 3
+            // 'id' => 10,
+            'nama' => 'Mahasiswa 3',
+            'role' => 'Mahasiswa',
+            'username' => 'mahasiswa3',
+            'password' => Hash::make('password'),
+            'email' => 'mahasiswa3@gmail.com',
+            'foto' => 'http://lorempixel.com/500/500/',
+            'no_hp' => '081234567890',
+            'fingerprint_pin' => '1241',
+            'remember_token' => Str::random(10),     
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+            'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
         ]]);
     }
 }
