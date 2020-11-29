@@ -7,6 +7,12 @@ class ProjectController extends Controller
 {
     public function index()
     {
-        return array('results' => Project::all());
+        $projects = Project::all();
+
+        foreach ($projects as $project) {
+            $project['product_owner_id'] = $project->product_owner->nama;
+        }
+
+        return array('results' => $projects);
     }
 }

@@ -29,4 +29,24 @@ class User extends Model implements AuthenticatableContract, AuthorizableContrac
     protected $hidden = [
         'password',
     ];
+
+    public function projects()
+    {
+        return $this->hasMany(Project::class, 'product_owner_id', 'id');
+    }
+
+    public function teams()
+    {
+        return $this->hasMany(Team::class, 'scrum_master_id', 'id');
+    }
+
+    public function mahasiswas()
+    {
+        return $this->hasMany(MemberTeam::class, 'mahasiswa_id', 'id');
+    }
+
+    public function dosens()
+    {
+        return $this->hasMany(MemberTeamNilai::class, 'dosen_id', 'id');
+    }
 }
