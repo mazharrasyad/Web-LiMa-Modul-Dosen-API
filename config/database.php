@@ -1,6 +1,7 @@
 <?php
 return [
     'default' => 'pgsql',
+    'migrations' => 'migrations',
     'connections' => [
         'mysql' => [
             'driver' => 'mysql',
@@ -13,24 +14,17 @@ return [
         ],
         'pgsql' => [
             'driver' => 'pgsql',
-            'url' => env('DATABASE_URL', 'postgres://qrhljtexgggsxk:53f6b2bd56c79ef76a15047e7040a318991410f52927a61c3aea339f2c20454d@ec2-34-234-185-150.compute-1.amazonaws.com:5432/danjhgfts68f8r'),
-            // 'host' => env('DB_HOST', 'ec2-34-234-185-150.compute-1.amazonaws.com'),
-            // 'port' => env('DB_PORT', '5432'),
-            // 'database' => env('DB_DATABASE', 'danjhgfts68f8r'),
-            // 'username' => env('DB_USERNAME', 'qrhljtexgggsxk'),
-            // 'password' => env('DB_PASSWORD', '53f6b2bd56c79ef76a15047e7040a318991410f52927a61c3aea339f2c20454d'),
+            'url' => env('DATABASE_URL', 'postgres://ntpbabkm:GLtV8QAyE72lon45zN30hAofgm4Vhf7X@rosie.db.elephantsql.com:5432/ntpbabkm'),
+            'host' => env('DB_HOST', 'rosie.db.elephantsql.com'),
+            'port' => env('DB_PORT', '5432'),
+            'database' => env('DB_DATABASE', 'ntpbabkm'),
+            'username' => env('DB_USERNAME', 'ntpbabkm'),
+            'password' => env('DB_PASSWORD', 'GLtV8QAyE72lon45zN30hAofgm4Vhf7X'),
             'charset' => 'utf8',
             'prefix' => '',
             'prefix_indexes' => true,
             'schema' => 'public',
             'sslmode' => 'prefer',
-            // Hosting
-            // DB_CONNECTION=pgsql
-            // DB_HOST=ec2-34-234-185-150.compute-1.amazonaws.com
-            // DB_PORT=5432
-            // DB_DATABASE=danjhgfts68f8r
-            // DB_USERNAME=qrhljtexgggsxk
-            // DB_PASSWORD=53f6b2bd56c79ef76a15047e7040a318991410f52927a61c3aea339f2c20454d
         ],
     ]
 ];
