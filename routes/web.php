@@ -24,6 +24,6 @@ $router->group(['prefix' => 'api'], function () use ($router) {
 
     $router->get('sprint', 'SprintController@index');
     $router->post('sprint', 'SprintController@create');
-    $router->put('sprint', 'SprintController@update');
-    $router->delete('sprint', 'SprintController@delete');
+    $router->put('sprint/{id}', 'SprintController@update');
+    $router->delete('sprint/{id}', 'SprintController@delete');
 });

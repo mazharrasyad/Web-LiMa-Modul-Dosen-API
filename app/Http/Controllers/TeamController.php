@@ -10,8 +10,8 @@ class TeamController extends Controller
         $teams = Team::all();
 
         foreach ($teams as $team) {
+            $team['scrum_master_id'] = $team->scrum_master->nama;
             if (!empty($team['project_id'])){
-                $team['scrum_master_id'] = $team->scrum_master->nama;
                 $team['project_id'] = $team->project->nama;
             }
         }
